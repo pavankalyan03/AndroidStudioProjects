@@ -1,4 +1,4 @@
-package com.example.register;
+package com.android.register;
 
 import android.os.Bundle;
 

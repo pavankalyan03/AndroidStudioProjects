@@ -79,9 +79,7 @@
                 android:layout_marginRight="24dp"
                 android:background="@drawable/horizontal">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"/>
+
             </HorizontalScrollView>
 
             <TextView

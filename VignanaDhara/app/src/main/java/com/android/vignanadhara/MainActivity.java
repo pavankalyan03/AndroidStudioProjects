@@ -6,8 +6,11 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +39,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH){
+                    Intent i = new Intent(getApplicationContext(),search.class);
+                    startActivity(i);
+                    return true;
+                }
+                return false;
+            }
+        });
         phd = (ConstraintLayout) findViewById(R.id.disvig);
 
         phd.setOnClickListener(new View.OnClickListener() {

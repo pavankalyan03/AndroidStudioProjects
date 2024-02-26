@@ -62,6 +62,7 @@
                 android:drawableStart="@drawable/search"
                 android:drawablePadding="10dp"
                 android:ems="10"
+                android:imeOptions="actionSearch"
                 android:fontFamily="@font/productbold"
                 android:hint="vignan search.."
                 android:inputType="text"

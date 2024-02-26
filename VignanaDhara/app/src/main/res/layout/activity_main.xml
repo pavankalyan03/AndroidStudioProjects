@@ -70,17 +70,183 @@
                 android:textColorLink="@color/white" />
 
 
-            <HorizontalScrollView
-                android:layout_width="495dp"
-                android:layout_height="120dp"
-                android:layout_marginLeft="24dp"
-
+            <RelativeLayout
+                android:layout_width="364dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="24dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginStart="24dp"
                 android:background="@drawable/horizontal">
 
 
-            </HorizontalScrollView>
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="67dp"
+                    android:layout_centerVertical="true"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="364dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="65dp"
+                            tools:layout_editor_absoluteX="167dp"
+                            tools:layout_editor_absoluteY="149dp">
+
+                            <TextView
+                                android:id="@+id/scroll1"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="0dp"
+                                android:fontFamily="@font/product"
+                                android:foregroundGravity="bottom"
+                                android:text="Instagram"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="12.5dp" />
+
+                            <ImageView
+                                android:id="@+id/scimg1"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_above="@+id/scroll1"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="6dp"
+                                android:background="@drawable/border"
+                                android:padding="2dp"
+                                android:src="@drawable/insta" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="65dp"
+                            tools:layout_editor_absoluteX="167dp"
+                            tools:layout_editor_absoluteY="149dp">
+
+                            <TextView
+                                android:id="@+id/scroll2"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="0dp"
+                                android:fontFamily="@font/product"
+                                android:foregroundGravity="bottom"
+                                android:text="Twitter"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="12.5dp" />
+
+                            <ImageView
+                                android:id="@+id/scimg2"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_above="@+id/scroll2"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="6dp"
+                                android:background="@drawable/border"
+                                android:padding="2dp"
+                                android:src="@drawable/twitter" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="65dp"
+                            tools:layout_editor_absoluteX="167dp"
+                            tools:layout_editor_absoluteY="149dp">
+
+                            <TextView
+                                android:id="@+id/scroll3"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="0dp"
+                                android:fontFamily="@font/product"
+                                android:foregroundGravity="bottom"
+                                android:text="facebook"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="12.5dp" />
+
+                            <ImageView
+                                android:id="@+id/scimg3"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_above="@+id/scroll3"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="6dp"
+                                android:background="@drawable/border"
+                                android:padding="2dp"
+                                android:src="@drawable/facebook" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="65dp"
+                            tools:layout_editor_absoluteX="167dp"
+                            tools:layout_editor_absoluteY="149dp">
+
+                            <TextView
+                                android:id="@+id/scroll4"
+                                android:layout_width="match_parent"
+                                android:layout_height="15dp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="0dp"
+                                android:fontFamily="@font/product"
+                                android:foregroundGravity="bottom"
+                                android:text="whatsapp"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="12.5dp" />
+
+                            <ImageView
+                                android:id="@+id/scimg4"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_above="@+id/scroll4"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginBottom="6dp"
+                                android:background="@drawable/border"
+                                android:padding="2dp"
+                                android:src="@drawable/whatsapp" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </RelativeLayout>
 
             <TextView
                 android:id="@+id/textView"

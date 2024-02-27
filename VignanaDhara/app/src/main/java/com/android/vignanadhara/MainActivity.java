@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
+
         phd = (ConstraintLayout) findViewById(R.id.disvig);
 
         phd.setOnClickListener(new View.OnClickListener() {

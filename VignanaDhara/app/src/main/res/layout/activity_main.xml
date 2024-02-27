@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@color/babypink">
+    android:background="#0C1618">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,7 +27,9 @@
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="3dp"
-                android:layout_marginTop="4dp">
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="90dp">
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/imageView"
@@ -42,20 +44,22 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <ImageView
+            <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_width="182dp"
+                android:layout_height="67dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                app:shapeAppearance="@style/roundcorners"
                 app:srcCompat="@drawable/img" />
 
             <EditText
                 android:id="@+id/editTextText"
                 android:layout_width="match_parent"
                 android:layout_height="65dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="9dp"
                 android:background="@drawable/border"
                 android:cursorVisible="true"
                 android:textCursorDrawable="@color/black"
@@ -64,19 +68,20 @@
                 android:ems="10"
                 android:imeOptions="actionSearch"
                 android:fontFamily="@font/productbold"
-                android:hint="vignan search.."
+                android:hint="Vignan Search.."
+                android:textSize="20dp"
                 android:inputType="text"
                 android:paddingStart="15dp"
-                android:textColorHint="@color/white"
+                android:textColorHint="#b8e8f6"
                 android:textColorLink="@color/white" />
 
 
             <RelativeLayout
-                android:layout_width="364dp"
+                android:layout_width="375dp"
                 android:layout_height="100dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="17dp"
                 android:background="@drawable/horizontal">
 
 
@@ -111,7 +116,7 @@
                                 android:foregroundGravity="bottom"
                                 android:text="Instagram"
                                 android:textAlignment="center"
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
                                 android:textSize="12.5dp" />
 
                             <ImageView
@@ -148,7 +153,7 @@
                                 android:foregroundGravity="bottom"
                                 android:text="Twitter"
                                 android:textAlignment="center"
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
                                 android:textSize="12.5dp" />
 
                             <ImageView
@@ -185,7 +190,7 @@
                                 android:foregroundGravity="bottom"
                                 android:text="facebook"
                                 android:textAlignment="center"
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
                                 android:textSize="12.5dp" />
 
                             <ImageView
@@ -200,7 +205,7 @@
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginBottom="6dp"
                                 android:background="@drawable/border"
-                                android:padding="2dp"
+                                android:padding="5dp"
                                 android:src="@drawable/facebook" />
 
 
@@ -222,7 +227,7 @@
                                 android:foregroundGravity="bottom"
                                 android:text="whatsapp"
                                 android:textAlignment="center"
-                                android:textColor="@color/black"
+                                android:textColor="@color/white"
                                 android:textSize="12.5dp" />
 
                             <ImageView
@@ -237,7 +242,7 @@
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginBottom="6dp"
                                 android:background="@drawable/border"
-                                android:padding="2dp"
+                                android:padding="5dp"
                                 android:src="@drawable/whatsapp" />
 
 
@@ -258,7 +263,7 @@
                 android:layout_marginRight="24dp"
                 android:fontFamily="@font/productbold"
                 android:text="Discover"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -271,7 +276,7 @@
                 android:padding="10dp"
                 android:background="@drawable/discover">
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/imageView5"
                     android:layout_width="90dp"
                     android:layout_height="90dp"
@@ -282,7 +287,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.811"
                     app:layout_constraintStart_toEndOf="@+id/textView3"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/roundcorners"/>
 
                 <TextView
                     android:id="@+id/textView3"
@@ -292,7 +298,7 @@
                     android:fontFamily="@font/productbold"
                     android:text="Vignan Students PHD News"
                     android:textSize="25dp"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -305,7 +311,7 @@
                     android:layout_marginBottom="16dp"
                     android:fontFamily="@font/product"
                     android:text="Student Acheived PHD"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/textView3"
                     app:layout_constraintEnd_toEndOf="@+id/textView3"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -339,7 +345,7 @@
                             android:layout_width="200dp"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/productbold"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:text="Incubation Associate For Technology\nBusiness Incubator (TBI)"
                             android:textSize="25dp" />
 
@@ -375,7 +381,7 @@
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/productbold"
                     android:text="VIGNAN MAHOTSAV 2024"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -389,7 +395,7 @@
                     android:layout_marginEnd="69dp"
                     android:fontFamily="@font/product"
                     android:text="Celebrations come halt"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     app:layout_constraintEnd_toStartOf="@+id/imageView7"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"

@@ -41,7 +41,12 @@ public class MainActivity extends AppCompatActivity {
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                return false;
+                Intent i = new Intent(MainActivity.this, webview.class);
+                i.putExtra("instagram",search.getQuery().toString());
+                startActivity(i);
+
+
+                return true;
             }
 
             @Override
@@ -55,13 +60,37 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(linearLayout);
         dataList = new ArrayList<>();
 
-        androidData = new DataClass("Sri Vardhan", "hii everyone", R.drawable.vardhan, "Student");
+        androidData = new DataClass("Amar Jukuntla", R.string.faculty, R.drawable.amar, "Faculty");
         dataList.add(androidData);
 
-        androidData = new DataClass("Akash", "hii crr", R.drawable.akash, "Student");
+        androidData = new DataClass("Bala Krishna", R.string.faculty, R.drawable.ml, "Faculty");
         dataList.add(androidData);
 
-        androidData = new DataClass("Mayookh", "hii ", R.drawable.mayookh, "student");
+        androidData = new DataClass("C.K.Rao", R.string.faculty, R.drawable.ckr, "Faculty");
+        dataList.add(androidData);
+
+        androidData = new DataClass("Akash", R.string.Akash, R.drawable.akash, "student");
+        dataList.add(androidData);
+
+        androidData = new DataClass("Shivasai", R.string.shivsai, R.drawable.shivasai, "student");
+        dataList.add(androidData);
+
+        androidData = new DataClass("Adhi", R.string.Adhi, R.drawable.adhi, "student");
+        dataList.add(androidData);
+
+        androidData = new DataClass("Vaibai", R.string.Vaibav, R.drawable.vaibav, "student");
+        dataList.add(androidData);
+
+        androidData = new DataClass("Mayookh", R.string.Mayookh, R.drawable.mayookh, "student");
+        dataList.add(androidData);
+
+        androidData = new DataClass("Sri Vardhan", R.string.Sri_Vardhan, R.drawable.vardhan, "student");
+        dataList.add(androidData);
+
+        androidData = new DataClass("Dr. L. Rathaiah", R.string.Chairman, R.drawable.chairman, "Chairman");
+        dataList.add(androidData);
+
+        androidData = new DataClass("Dr. P. Nagabhushan", R.string.vice, R.drawable.vice, "Vice Chancellor");
         dataList.add(androidData);
 
         adapter = new MyAdapter(MainActivity.this,dataList);

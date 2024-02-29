@@ -3,7 +3,7 @@ package com.android.vignanadhara;
 public class DataClass {
 
     private String datatitle;
-    private String datadesc;
+    private int datadesc;
     private int dataimg;
 
     private String desig;
@@ -16,7 +16,7 @@ public class DataClass {
         return datatitle;
     }
 
-    public String getDatadesc() {
+    public int getDatadesc() {
         return datadesc;
     }
 
@@ -24,7 +24,7 @@ public class DataClass {
         return dataimg;
     }
 
-    public DataClass(String datatitle, String datadesc, int dataimg, String desig) {
+    public DataClass(String datatitle, int datadesc, int dataimg, String desig) {
         this.datatitle = datatitle;
         this.datadesc = datadesc;
         this.dataimg = dataimg;

@@ -25,7 +25,7 @@ public class Detailed_View extends AppCompatActivity {
         if(bundle != null){
             detailtitle.setText(bundle.getString("Title"));
             detailimg.setImageResource(bundle.getInt("Image"));
-            detaildesc.setText(bundle.getString("Desc"));
+            detaildesc.setText(bundle.getInt("Desc"));
         }
 
     }

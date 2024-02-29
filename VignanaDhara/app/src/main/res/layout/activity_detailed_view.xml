@@ -16,13 +16,14 @@
         android:textSize="35dp"
         android:layout_gravity="center" />
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/detailimg"
         android:layout_width="149dp"
         android:layout_height="158dp"
         android:src="@drawable/phd"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
+        app:shapeAppearanceOverlay="@style/roundcorners"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -12,7 +12,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
+import android.widget.TwoLineListItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,13 +38,14 @@ public class MainActivity extends AppCompatActivity {
 
         search = findViewById(R.id.searchtext);
 
+
         search.clearFocus();
 
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 Intent i = new Intent(MainActivity.this, webview.class);
-                i.putExtra("instagram",search.getQuery().toString());
+                i.putExtra("query",search.getQuery().toString());
                 startActivity(i);
 
 
@@ -96,9 +99,116 @@ public class MainActivity extends AppCompatActivity {
         adapter = new MyAdapter(MainActivity.this,dataList);
         recyclerView.setAdapter(adapter);
 
+        RelativeLayout insta, twitter, facebook, whatsapp, Linkedin;
+
+        insta = findViewById(R.id.instagram);
+
+        insta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.instagram.com/vignanuniversityofficial?igsh=bmlzd2U2bmx5dzBy");
+                Intent i = new Intent(Intent.ACTION_VIEW, uri);
+
+                i.setPackage("com.instagram.android");
+                startActivity(i);
+            }
+        });
+
+        twitter = findViewById(R.id.twitter);
+
+        twitter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Uri uri = Uri.parse("https://x.com/VFSTR_Vignan?t=atO8Dm9EYa6-PMHpkEkGhg&s=08");
+                Intent i = new Intent(Intent.ACTION_VIEW, uri);
+
+                i.setPackage("com.twitter.android");
+                startActivity(i);
+
+            }
+        });
+
+        facebook = findViewById(R.id.facebook);
+
+        facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.facebook.com/vignanuniversityofficial?mibextid=ZbWKwL");
+
+                Intent i = new Intent(Intent.ACTION_VIEW, uri);
+
+                Intent choose = Intent.createChooser(i,"chooseapp");
+                startActivity(choose);
+            }
+        });
+
+        whatsapp = findViewById(R.id.whatsapp);
+
+        whatsapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://api.whatsapp.com/send?phone="+"917799427427";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
+            }
+        });
+
+        Linkedin = findViewById(R.id.Linkedin);
+
+        Linkedin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.linkedin.com/school/vignans-foundation-for-science-technology-research-deemed-to-be-university/");
+
+                Intent i = new Intent(Intent.ACTION_VIEW, uri);
+
+                i.setPackage("com.linkedin.android");
+                startActivity(i);
+            }
+        });
+
+
+        phd = (ConstraintLayout) findViewById(R.id.disvig);
+
+        phd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vignan.ac.in/events/student%20PHD%2016022024_andhraprabha.jpeg"));
+                startActivity(i);
+            }
+        });
+
+        tbi = (ConstraintLayout) findViewById(R.id.tbicon);
+
+        tbi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vignan.ac.in/vignantbi/"));
+                startActivity(i);
+            }
+        });
+
+        mahotsav = (ConstraintLayout) findViewById(R.id.mahotsavcon);
+
+        mahotsav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=lPQ4inwLiFk"));
+                startActivity(i);
+            }
+        });
+
+
+
+
+
 
 
     }
+
+
 
     private void searchList(String text){
         List<DataClass> datasearchlist = new ArrayList<>();

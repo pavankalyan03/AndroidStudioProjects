@@ -4,9 +4,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="shadegray">#B9BBB6</color>
     <color name="gray">#C7C6C1</color>
-    <color name="background">#0C1618</color>
-    <color name="edittext">#243B43</color>
-    <color name="hinttext">#b8e8f6</color>
-    <color name="horizontal">#122023</color>
+    <color name="background">#dfeef1</color>
+    <color name="edittext">#bddade</color>
+    <color name="hinttext">#09262c</color>
+    <color name="horizontal">#f2fcfe</color>
 
 </resources>

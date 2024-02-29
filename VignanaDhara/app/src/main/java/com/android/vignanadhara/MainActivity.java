@@ -1,20 +1,29 @@
 package com.android.vignanadhara;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText search;
+    SearchView search;
+    RecyclerView recyclerView;
+    List<DataClass> dataList;
+    MyAdapter adapter;
+    DataClass androidData;
 
     ConstraintLayout phd, tbi, mahotsav;
 
@@ -23,63 +32,57 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        search = (EditText) findViewById(R.id.editTextText);
+        recyclerView = findViewById(R.id.recycle);
 
+        search = findViewById(R.id.searchtext);
 
-        search.setOnFocusChangeListener(new View.OnFocusChangeListener(){
+        search.clearFocus();
+
+        search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus){
-                    search.setHint("");
-                }
-                else{
-                    search.setHint("vignan search..");
-                }
-
-            }
-        });
-
-        search.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_SEARCH){
-                    Intent i = new Intent(getApplicationContext(),search.class);
-                    startActivity(i);
-                    return true;
-                }
+            public boolean onQueryTextSubmit(String query) {
                 return false;
             }
-        });
 
-        phd = (ConstraintLayout) findViewById(R.id.disvig);
-
-        phd.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com"));
-                startActivity(i);
+            public boolean onQueryTextChange(String newText) {
+                searchList(newText);
+                return true;
             }
         });
 
-        tbi = (ConstraintLayout) findViewById(R.id.tbicon);
+        LinearLayoutManager linearLayout = new LinearLayoutManager(MainActivity.this);
+        recyclerView.setLayoutManager(linearLayout);
+        dataList = new ArrayList<>();
 
-        tbi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://vignan.ac.in/vignantbi/"));
-                startActivity(i);
+        androidData = new DataClass("Sri Vardhan", "hii everyone", R.drawable.vardhan, "Student");
+        dataList.add(androidData);
+
+        androidData = new DataClass("Akash", "hii crr", R.drawable.akash, "Student");
+        dataList.add(androidData);
+
+        androidData = new DataClass("Mayookh", "hii ", R.drawable.mayookh, "student");
+        dataList.add(androidData);
+
+        adapter = new MyAdapter(MainActivity.this,dataList);
+        recyclerView.setAdapter(adapter);
+
+
+
+    }
+
+    private void searchList(String text){
+        List<DataClass> datasearchlist = new ArrayList<>();
+        for(DataClass data : dataList){
+            if(data.getDatatitle().toLowerCase().contains(text.toLowerCase())){
+                datasearchlist.add(data);
             }
-        });
-
-        mahotsav = (ConstraintLayout) findViewById(R.id.mahotsavcon);
-
-        mahotsav.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.vignan.ac.in/mahotsav/"));
-                startActivity(i);
-            }
-        });
-
+        }
+        if(datasearchlist.isEmpty()){
+            Toast.makeText(this, "not found", Toast.LENGTH_SHORT).show();
+        }
+        else{
+            adapter.setSearchList(datasearchlist);
+        }
     }
 }

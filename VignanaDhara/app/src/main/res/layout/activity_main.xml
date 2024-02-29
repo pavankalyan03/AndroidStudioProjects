@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#0C1618">
+    android:background="@color/background">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -53,28 +53,35 @@
                 app:shapeAppearance="@style/roundcorners"
                 app:srcCompat="@drawable/img" />
 
-            <EditText
-                android:id="@+id/editTextText"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:layout_marginLeft="17dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="9dp"
-                android:background="@drawable/border"
-                android:cursorVisible="true"
-                android:textCursorDrawable="@color/black"
-                android:drawableStart="@drawable/search"
-                android:drawablePadding="10dp"
-                android:ems="10"
-                android:imeOptions="actionSearch"
-                android:fontFamily="@font/productbold"
-                android:hint="Vignan Search.."
-                android:textSize="20dp"
-                android:inputType="text"
-                android:paddingStart="15dp"
-                android:textColorHint="#b8e8f6"
-                android:textColorLink="@color/white" />
+                android:layout_height="wrap_content">
 
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/searchtext"
+                    android:layout_width="match_parent"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="9dp"
+                    android:background="@drawable/edittext"
+                    android:fontFamily="@font/productbold"
+                    app:iconifiedByDefault="false"
+                    app:queryHint="Vignan search.."/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="330dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_below="@id/searchtext"
+                    android:paddingBottom="10dp"
+                    android:clipToPadding="false"
+                    android:scrollbars="vertical" />
+
+            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="375dp"
@@ -130,7 +137,7 @@
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginBottom="6dp"
-                                android:background="@drawable/border"
+                                android:background="@drawable/edittext"
                                 android:padding="2dp"
                                 android:src="@drawable/insta" />
 
@@ -167,7 +174,7 @@
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginBottom="6dp"
-                                android:background="@drawable/border"
+                                android:background="@drawable/edittext"
                                 android:padding="2dp"
                                 android:src="@drawable/twitter" />
 
@@ -204,7 +211,7 @@
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginBottom="6dp"
-                                android:background="@drawable/border"
+                                android:background="@drawable/edittext"
                                 android:padding="5dp"
                                 android:src="@drawable/facebook" />
 
@@ -241,7 +248,7 @@
                                 android:layout_marginStart="10dp"
                                 android:layout_marginEnd="10dp"
                                 android:layout_marginBottom="6dp"
-                                android:background="@drawable/border"
+                                android:background="@drawable/edittext"
                                 android:padding="5dp"
                                 android:src="@drawable/whatsapp" />
 

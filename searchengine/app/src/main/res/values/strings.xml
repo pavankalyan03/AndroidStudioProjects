@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Search</string>
+    <string name="faculty">To evolve into a centre of excellence in Science and
+        Technology through creative and innovative practices in teaching - learning,
+        towards promoting academic achievement and research excellence to produce
+        internationally accepted, competitive and world class
+        professionals who are psychologically strong and emotionally balanced
+        imbued with social consciousness and ethical values.
+        To provide high quality academic programmes, training activities,
+        research facilities and opportunities supported by continuous
+        industry - institute interaction aimed at promoting employability, entrepreneurship,
+        leadership and research aptitude among
+        students and contribute to the
+        economic and technological development of the region, state and nation</string>
+
+    <string name="Chairman"> Dr. L. Rathaiah, Chairman of Vignan group of institutions,
+        was destined to be different, or should we say, he chose to be different.
+        He was not content with just teaching. He spotted the chinks in the education
+        system of the state and went about changing it to make it more effective,
+        productive and powerful. He successfully altered the education scenario in A.P
+        and brought about a socio-economic revolution of sorts. The education fraternity
+        was so persuaded by the strength of this alternate model that they adopted the
+        new system of imparting education without any reservation.
+        The system initiated by this illustrious
+        educationist, became instrumental in affecting a paradigm shift in
+        the whole education scenario of the state.</string>
+
+    <string name="vice">Greetings from the Vice-Chancellor of the Vignan\'s Foundation for Science, Technology and Research.
+                        As contained in the very title of the institution, the focussed
+                        objective is to ensure that the outgoing graduates are foundation wise strong in their respective
+                        disciplines and across, confirming that they would be the most trusted performers; performers - professionally
+                        strong with ethics and commitment.The title of the institution also implies that the learning process
+                        in the University encompasses all three aspects - Science,
+                        Technology and Research, expressed in simple alternate terms, a learner will emerge as a balanced
+                        agglomeration of Fundamentals of underlying Science -
+                        that is the Knowledge to accept the problem.
+                        Capability to transform the Science into Technology -
+                        that is the Skill to solve the problem.
+                        Intrinsic values of Research -
+                        that is the Creativity in providing a value composed solution to the problem.
+    </string>
+
+    <string name="Akash">Name : Sai Akash\nBranch : AIML\nSection: A\nDay scholar: Yes\nskills : Leadership, Communication</string>
+    <string name="shivsai">Name: J. ShivaSai\nBranch: AIML\nSection: A\nDay scholar: NO\nskills: Interpersonal skills</string>
+    <string name="Adhi">Name: M. Adhi Narayana\nBranch: AIML\nSection: A\nDay scholar: NO\nskills: Conflict Manager</string>
+    <string name="Vaibav">Name: A.Vaibav\nBranch: AIML\nSection: A\nDay scholar: Yes\nskills: Punctuality</string>
+    <string name="Mayookh">Name: B.Mayookh\nBranch: AIML\nSection: A\nDay scholar: NO\nskills: Punctuality</string>
+    <string name="Sri_Vardhan">Name: Ch. Sri Vardhan\nBranch: AIML\nSection: A\nDay scholar: NO\nskills: Conflict Manager</string>
+
+</resources>

@@ -62,14 +62,13 @@
 
         <TextView
             android:id="@+id/proemail"
-            android:layout_width="wrap_content"
+            android:layout_width="247dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="92dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/product"
-            android:text="gmail.com"
-            android:textSize="20dp"
-            />
+            android:text="username gmail.com"
+            android:textSize="20dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -164,7 +163,11 @@
         android:layout_height="wrap_content"
         android:text="Logout"
         android:layout_gravity="center"
-        android:layout_marginTop="80dp"/>
+        android:layout_marginTop="80dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/medgray"/>
+
+
 
 
 </LinearLayout>

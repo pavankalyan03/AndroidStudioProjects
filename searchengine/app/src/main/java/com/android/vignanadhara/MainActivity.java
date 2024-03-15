@@ -3,7 +3,6 @@ package com.android.vignanadhara;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,10 +10,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-import android.widget.TwoLineListItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     MyAdapter adapter;
     DataClass androidData;
 
-    ConstraintLayout phd, tbi, mahotsav;
+    ConstraintLayout phd, tbi, mahotsav, profilephoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +37,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         search.clearFocus();
+
+        profilephoto = findViewById(R.id.profile);
+
+        profilephoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, profile.class);
+                startActivity(i);
+                
+            }
+        });
+
+
 
         search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

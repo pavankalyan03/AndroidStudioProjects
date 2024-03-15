@@ -8,5 +8,9 @@
     <color name="edittext">#bddade</color>
     <color name="hinttext">#09262c</color>
     <color name="horizontal">#f2fcfe</color>
+    <color name="slategray">#708090</color>
+    <color name="charcoal">#36454F</color>
+    <color name="darkgray">#2A3133</color>
+    <color name="medgray">#60636A</color>
 
 </resources>

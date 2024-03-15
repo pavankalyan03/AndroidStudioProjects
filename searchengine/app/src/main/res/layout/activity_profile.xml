@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".profile">
+
+  <TextView
+      android:id="@+id/textView10"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Profile"
+      android:fontFamily="@font/product"
+      android:gravity="center"
+      android:textSize="40dp"
+      android:layout_marginBottom="30dp"/>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/product"
+        android:text="Username"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/prouser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/product"
+        android:text="Name"
+        android:textSize="20dp"
+        />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginTop="17dp">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/product"
+        android:text="Email"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/proemail"
+        android:layout_width="247dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="92dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/product"
+        android:text="username gmail.com"
+        android:textSize="20dp" />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginTop="17dp">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/product"
+        android:text="Password"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/propass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="55dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/product"
+        android:text="pass"
+        android:textSize="20dp"
+        />
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginTop="17dp">
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/product"
+        android:text="Gender"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/progender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="72dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/product"
+        android:text="gen"
+        android:textSize="20dp"
+        />
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginTop="17dp">
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/product"
+        android:text="Location"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/prolocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="65dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/product"
+        android:text="here"
+        android:textSize="20dp"
+        />
+
+  </LinearLayout>
+
+  <Button
+      android:id="@+id/logout"
+      android:layout_width="120dp"
+      android:layout_height="wrap_content"
+      android:text="Logout"
+      android:layout_gravity="center"
+      android:layout_marginTop="80dp"
+      android:textColor="@color/white"
+      android:backgroundTint="@color/medgray"/>
+
+
+</LinearLayout>

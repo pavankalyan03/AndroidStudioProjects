@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "976874273225",
+    "project_id": "searchengine-b763b",
+    "storage_bucket": "searchengine-b763b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:976874273225:android:dd34ea89792f7249e85018",
+        "android_client_info": {
+          "package_name": "com.android.vignanadhara"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR_z66kcbF4mciblkl77T_FwtOzZWBCj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

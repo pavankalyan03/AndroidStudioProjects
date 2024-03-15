@@ -66,6 +66,8 @@ public class signup extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
+
                 firebaseDatabase = FirebaseDatabase.getInstance();
                 databaseReference = firebaseDatabase.getReference("users");
 
@@ -74,13 +76,20 @@ public class signup extends AppCompatActivity {
                 String signpass = password.getText().toString();
                 String signlocation = location.getText().toString();
 
+                if (signuser.isEmpty() | signemail.isEmpty() | signpass.isEmpty()){
+                    Toast.makeText(signup.this,"Enter Required Fields", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    HelperClass helperClass = new HelperClass(signuser, signemail, signpass, sex, signlocation);
+                    databaseReference.child(signuser).setValue(helperClass);
 
-                HelperClass helperClass = new HelperClass(signuser, signemail, signpass, sex, signlocation);
-                databaseReference.child(signuser).setValue(helperClass);
+                    Toast.makeText(signup.this, "Registered Sucessfully",Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(signup.this, Login.class);
+                    startActivity(i);
+                }
 
-                Toast.makeText(signup.this, "Registered Sucessfully",Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(signup.this, Login.class);
-                startActivity(i);
+
+
 
             }
         });

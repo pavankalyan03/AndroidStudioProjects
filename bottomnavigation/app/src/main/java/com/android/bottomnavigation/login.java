@@ -1,10 +1,11 @@
-package com.android.realtimeregister;
+package com.android.bottomnavigation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.Navigation;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -22,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Objects;
 
-public class Login extends AppCompatActivity {
+public class login extends AppCompatActivity {
 
     EditText loginUsername, loginPassword;
     Button loginButton;
@@ -52,7 +53,7 @@ public class Login extends AppCompatActivity {
         signupRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Login.this, signup.class);
+                Intent intent = new Intent(login.this, signup.class);
                 startActivity(intent);
             }
         });
@@ -106,15 +107,15 @@ public class Login extends AppCompatActivity {
                         String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
                         String locationFromDB = snapshot.child(userUsername).child("location").getValue(String.class);
 
-                        Intent intent = new Intent(Login.this, profile.class);
+                        Intent intent = new Intent(login.this, navigation.class);
 
+                        Bundle bundle = new Bundle();
+                        bundle.putString("displayName", usernameFromDB);
+                        bundle.putString("email", emailFromDB);
+                        bundle.putString("gender", genderFromDB);
+                        bundle.putString("location", locationFromDB);
 
-//                        intent.putExtra("gender", genderFromDB);
-//                        intent.putExtra("email", emailFromDB);
-//                        intent.putExtra("username", usernameFromDB);
-//                        intent.putExtra("password", passwordFromDB);
-//                        intent.putExtra("location", locationFromDB);
-
+                        intent.putExtras(bundle);
                         startActivity(intent);
                     } else {
                         loginPassword.setError("Invalid Credentials");
@@ -132,4 +133,6 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
+
 }

@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "1083850378307",
+    "firebase_url": "https://realtimeregister-e955e-default-rtdb.firebaseio.com",
+    "project_id": "realtimeregister-e955e",
+    "storage_bucket": "realtimeregister-e955e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083850378307:android:7cfa333a2fb57024eb18f6",
+        "android_client_info": {
+          "package_name": "com.android.bottomnavigation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEhQrUJ2gr8MXF2LHSP-09y0MmlR36o-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083850378307:android:f44ba5ebc0611920eb18f6",
+        "android_client_info": {
+          "package_name": "com.android.realtimeregister"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEhQrUJ2gr8MXF2LHSP-09y0MmlR36o-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

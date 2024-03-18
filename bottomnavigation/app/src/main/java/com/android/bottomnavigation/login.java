@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.Navigation;
+import androidx.lifecycle.ViewModelProvider;
+
 
 import android.content.Intent;
-import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,23 +21,28 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-import java.util.Objects;
-
 public class login extends AppCompatActivity {
+
+    private UserViewModel userViewModel;
 
     EditText loginUsername, loginPassword;
     Button loginButton;
     TextView signupRedirectText;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
+
         loginUsername = findViewById(R.id.loguser);
         loginPassword = findViewById(R.id.logpass);
         loginButton = findViewById(R.id.loginbut);
         signupRedirectText = findViewById(R.id.reregister);
+
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,14 +92,19 @@ public class login extends AppCompatActivity {
         String userUsername = loginUsername.getText().toString().trim();
         String userPassword = loginPassword.getText().toString().trim();
 
+
+        userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
+
+
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
         Query checkUserDatabase = reference.orderByChild("username").equalTo(userUsername);
 
         checkUserDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                if (snapshot.exists()){
+                if (snapshot.exists()) {
 
                     loginUsername.setError(null);
                     String passwordFromDB = snapshot.child(userUsername).child("password").getValue(String.class);
@@ -102,30 +112,36 @@ public class login extends AppCompatActivity {
                     if (passwordFromDB.equals(userPassword)) {
                         loginUsername.setError(null);
 
-                        String genderFromDB = snapshot.child(userUsername).child("gender").getValue(String.class);
-                        String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
-                        String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
-                        String locationFromDB = snapshot.child(userUsername).child("location").getValue(String.class);
 
-                        Intent intent = new Intent(login.this, navigation.class);
+                            String genderFromDB = snapshot.child(userUsername).child("gender").getValue(String.class);
+                            String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
+                            String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
+                            String locationFromDB = snapshot.child(userUsername).child("location").getValue(String.class);
 
-                        Bundle bundle = new Bundle();
-                        bundle.putString("displayName", usernameFromDB);
-                        bundle.putString("email", emailFromDB);
-                        bundle.putString("gender", genderFromDB);
-                        bundle.putString("location", locationFromDB);
 
-                        intent.putExtras(bundle);
-                        startActivity(intent);
+
+                            userViewModel.setGender(genderFromDB);
+                            userViewModel.setLocation(locationFromDB);
+                            userViewModel.setEmail(emailFromDB);
+                            userViewModel.setUsername(usernameFromDB);
+
+                            Log.d("UserViewModel", "Gender: " + genderFromDB);
+                            Log.d("UserViewModel", "Location: " + locationFromDB);
+                            Log.d("UserViewModel", "Email: " + emailFromDB);
+                            Log.d("UserViewModel", "Username: " + usernameFromDB);
+                            Intent intent = new Intent(login.this, navigation.class);
+
+                            startActivity(intent);
+                        } else {
+                            loginPassword.setError("Invalid Credentials");
+                            loginPassword.requestFocus();
+                        }
                     } else {
-                        loginPassword.setError("Invalid Credentials");
-                        loginPassword.requestFocus();
+                        loginUsername.setError("User does not exist");
+                        loginUsername.requestFocus();
                     }
-                } else {
-                    loginUsername.setError("User does not exist");
-                    loginUsername.requestFocus();
                 }
-            }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {

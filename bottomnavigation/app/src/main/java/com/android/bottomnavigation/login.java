@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;
-import androidx.lifecycle.ViewModelProvider;
-
 
 import android.content.Intent;
 import android.util.Log;
@@ -23,8 +21,6 @@ import com.google.firebase.database.ValueEventListener;
 
 public class login extends AppCompatActivity {
 
-    private UserViewModel userViewModel;
-
     EditText loginUsername, loginPassword;
     Button loginButton;
     TextView signupRedirectText;
@@ -35,8 +31,6 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-
 
         loginUsername = findViewById(R.id.loguser);
         loginPassword = findViewById(R.id.logpass);
@@ -93,9 +87,6 @@ public class login extends AppCompatActivity {
         String userPassword = loginPassword.getText().toString().trim();
 
 
-        userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
-
-
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
         Query checkUserDatabase = reference.orderByChild("username").equalTo(userUsername);
 
@@ -113,25 +104,27 @@ public class login extends AppCompatActivity {
                         loginUsername.setError(null);
 
 
-                            String genderFromDB = snapshot.child(userUsername).child("gender").getValue(String.class);
-                            String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
-                            String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
-                            String locationFromDB = snapshot.child(userUsername).child("location").getValue(String.class);
+                        String genderFromDB = snapshot.child(userUsername).child("gender").getValue(String.class);
+                        String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
+                        String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
+                        String locationFromDB = snapshot.child(userUsername).child("location").getValue(String.class);
 
 
+                        Intent intent = new Intent(login.this, navigation.class);
 
-                            userViewModel.setGender(genderFromDB);
-                            userViewModel.setLocation(locationFromDB);
-                            userViewModel.setEmail(emailFromDB);
-                            userViewModel.setUsername(usernameFromDB);
+                        intent.putExtra("username",usernameFromDB);
+                        intent.putExtra("email",emailFromDB);
+                        intent.putExtra("password",passwordFromDB);
+                        intent.putExtra("gender",genderFromDB);
+                        intent.putExtra("location",locationFromDB);
 
-                            Log.d("UserViewModel", "Gender: " + genderFromDB);
-                            Log.d("UserViewModel", "Location: " + locationFromDB);
-                            Log.d("UserViewModel", "Email: " + emailFromDB);
-                            Log.d("UserViewModel", "Username: " + usernameFromDB);
-                            Intent intent = new Intent(login.this, navigation.class);
+                        Log.d("UserViewModel", "Gender: " + genderFromDB);
+                        Log.d("UserViewModel", "Location: " + locationFromDB);
+                        Log.d("UserViewModel", "Email: " + emailFromDB);
+                        Log.d("UserViewModel", "Username: " + usernameFromDB);
 
-                            startActivity(intent);
+
+                        startActivity(intent);
                         } else {
                             loginPassword.setError("Invalid Credentials");
                             loginPassword.requestFocus();

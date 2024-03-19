@@ -43,7 +43,7 @@
         android:text="Welcome"
         android:fontFamily="@font/product"
         android:textSize="40dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

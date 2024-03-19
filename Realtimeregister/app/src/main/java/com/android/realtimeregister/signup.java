@@ -84,7 +84,7 @@ public class signup extends AppCompatActivity {
                     databaseReference.child(signuser).setValue(helperClass);
 
                     Toast.makeText(signup.this, "Registered Sucessfully",Toast.LENGTH_SHORT).show();
-                    Intent i = new Intent(signup.this, Login.class);
+                    Intent i = new Intent(signup.this, login.class);
                     startActivity(i);
                 }
 
@@ -97,7 +97,7 @@ public class signup extends AppCompatActivity {
         backlo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(signup.this, Login.class);
+                Intent i = new Intent(signup.this, login.class);
                 startActivity(i);
             }
         });

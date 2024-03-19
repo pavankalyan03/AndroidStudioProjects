@@ -7,62 +7,62 @@
     android:orientation="vertical"
     android:layout_marginStart="24dp"
     android:layout_marginTop="200dp"
-    tools:context=".Login">
+    tools:context=".login">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Username"
-            android:textSize="20dp"
-            android:fontFamily="@font/product" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="20dp"
+        android:fontFamily="@font/product" />
 
-        <EditText
-            android:id="@+id/loguser"
-            android:layout_width="314dp"
-            android:layout_height="70dp"
-            android:ems="10"
-            android:fontFamily="@font/product"
-            android:inputType="text"
-            android:minHeight="48dp"
-            android:padding="2dp" />
+    <EditText
+        android:id="@+id/loguser"
+        android:layout_width="314dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:fontFamily="@font/product"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="2dp" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/product"
-            android:text="Password"
-            android:layout_marginTop="20dp"
-            android:textSize="20dp" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/product"
+        android:text="Password"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp" />
 
-        <EditText
-            android:id="@+id/logpass"
-            android:layout_width="314dp"
-            android:layout_height="70dp"
-            android:autofillHints=""
-            android:ems="10"
-            android:fontFamily="@font/product"
-            android:inputType="text"
-            android:minHeight="48dp" />
+    <EditText
+        android:id="@+id/logpass"
+        android:layout_width="314dp"
+        android:layout_height="70dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:fontFamily="@font/product"
+        android:inputType="text"
+        android:minHeight="48dp" />
 
-        <Button
-            android:id="@+id/loginbut"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/product"
-            android:text="Login"
-            android:textSize="20sp"
-            android:textColor="@color/white"
-            android:backgroundTint="@color/medgray"
-            android:layout_marginTop="35dp"/>
+    <Button
+        android:id="@+id/loginbut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/product"
+        android:text="Login"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/medgray"
+        android:layout_marginTop="35dp"/>
 
-        <TextView
-            android:id="@+id/reregister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/product"
-            android:text="register ?"
-            android:textSize="20dp"
-            android:layout_marginTop="7dp"/>
+    <TextView
+        android:id="@+id/reregister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/product"
+        android:text="register ?"
+        android:textSize="20dp"
+        android:layout_marginTop="7dp"/>
 </LinearLayout>

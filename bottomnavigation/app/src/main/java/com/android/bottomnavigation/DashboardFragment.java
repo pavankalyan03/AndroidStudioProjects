@@ -86,6 +86,13 @@ public class DashboardFragment extends Fragment {
             }
         });
 
+        userViewModel.getPassword().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                password.setText(s);
+            }
+        });
+
         return view;
     }
 

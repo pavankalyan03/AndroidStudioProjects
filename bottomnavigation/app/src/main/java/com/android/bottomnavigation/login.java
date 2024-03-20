@@ -108,7 +108,7 @@ public class login extends AppCompatActivity {
                         String emailFromDB = snapshot.child(userUsername).child("email").getValue(String.class);
                         String usernameFromDB = snapshot.child(userUsername).child("username").getValue(String.class);
                         String locationFromDB = snapshot.child(userUsername).child("location").getValue(String.class);
-
+                        String branchFromDB = snapshot.child(userUsername).child("branch").getValue(String.class);
 
                         Intent intent = new Intent(login.this, navigation.class);
 
@@ -117,6 +117,7 @@ public class login extends AppCompatActivity {
                         intent.putExtra("password",passwordFromDB);
                         intent.putExtra("gender",genderFromDB);
                         intent.putExtra("location",locationFromDB);
+                        intent.putExtra("branch", branchFromDB);
 
                         Log.d("UserViewModel", "Gender: " + genderFromDB);
                         Log.d("UserViewModel", "Location: " + locationFromDB);

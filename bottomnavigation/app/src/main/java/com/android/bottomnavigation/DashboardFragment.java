@@ -37,12 +37,13 @@ public class DashboardFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
 
         // Initialize your TextViews here
-        TextView puser, pem, password, gender, location;
+        TextView puser, pem, password, gender, location, branch;
         puser = view.findViewById(R.id.prouser);
         pem = view.findViewById(R.id.proemail);
         password = view.findViewById(R.id.propass);
         gender = view.findViewById(R.id.progender);
         location = view.findViewById(R.id.prolocation);
+        branch = view.findViewById(R.id.probranch);
 
         Log.d("enty", "Gender: 45" );
 
@@ -90,6 +91,13 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onChanged(String s) {
                 password.setText(s);
+            }
+        });
+
+        userViewModel.getBranch().observe(getViewLifecycleOwner(), new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                branch.setText(s);
             }
         });
 

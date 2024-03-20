@@ -31,12 +31,14 @@ public class navigation extends AppCompatActivity {
         String navpass = i.getStringExtra("password");
         String navgen = i.getStringExtra("gender");
         String navloc = i.getStringExtra("location");
+        String navbran = i.getStringExtra("branch");
 
         userViewModel.setUsername(navuser);
         userViewModel.setEmail(navemail);
         userViewModel.setPassword(navpass);
         userViewModel.setGender(navgen);
         userViewModel.setLocation(navloc);
+        userViewModel.setBranch(navbran);
 
 
         binding = NavigationBinding.inflate(getLayoutInflater());

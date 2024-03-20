@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class signup extends AppCompatActivity {
 
-    EditText username, email, password, repassword, location;
+    EditText username, email, password, repassword, location, branch;
     RadioGroup gender;
 
     RadioButton male, female;
@@ -61,6 +61,7 @@ public class signup extends AppCompatActivity {
         location = findViewById(R.id.reglocation);
         reg = findViewById(R.id.register);
         backlo = findViewById(R.id.backlogin);
+        branch = findViewById(R.id.regbranch);
 
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,12 +76,13 @@ public class signup extends AppCompatActivity {
                 String signemail = email.getText().toString();
                 String signpass = password.getText().toString();
                 String signlocation = location.getText().toString();
+                String signbranch = branch.getText().toString();
 
                 if (signuser.isEmpty() | signemail.isEmpty() | signpass.isEmpty()){
                     Toast.makeText(signup.this,"Enter Required Fields", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    HelperClass helperClass = new HelperClass(signuser, signemail, signpass, sex, signlocation);
+                    HelperClass helperClass = new HelperClass(signuser, signemail, signpass, sex, signlocation, signbranch);
                     databaseReference.child(signuser).setValue(helperClass);
 
                     Toast.makeText(signup.this, "Registered Sucessfully",Toast.LENGTH_SHORT).show();

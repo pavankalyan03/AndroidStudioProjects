@@ -10,6 +10,7 @@ public class UserViewModel extends ViewModel {
     private MutableLiveData<String> email = new MutableLiveData<>("");
     private MutableLiveData<String> username = new MutableLiveData<>("");
     private MutableLiveData<String> password = new MutableLiveData<>("");
+    private MutableLiveData<String> branch = new MutableLiveData<>("");
 
     public LiveData<String> getGender() {
         return gender;
@@ -46,8 +47,13 @@ public class UserViewModel extends ViewModel {
     public LiveData<String> getPassword() {
         return password;
     }
-    public void setPassword(String value) {
-        password.setValue(value);
+    public void setPassword(String value){password.setValue(value);}
+
+    public LiveData<String> getBranch() {
+        return branch;
+    }
+    public void setBranch(String value) {
+        branch.setValue(value);
     }
 
 }

@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Notification" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/lightsky</item>
+        <item name="colorPrimaryVariant">@color/skyblue</item>
+        <item name="colorOnPrimary">@color/lightsky</item>
+    </style>
+
+    <style name="Theme.Notification" parent="Base.Theme.Notification" />
+</resources>

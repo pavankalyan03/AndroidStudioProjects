@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.whatsapp.R;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText editTextMessage;
@@ -18,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextMessage=(EditText)findViewById(R.id.editTextText2);
+        editTextMessage=(EditText)findViewById(R.id.editTextText);
 
         send=(Button)findViewById(R.id.button);
 

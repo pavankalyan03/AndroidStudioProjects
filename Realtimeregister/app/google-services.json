@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1083850378307",
-    "project_id": "realtimeregister-e955e",
-    "storage_bucket": "realtimeregister-e955e.appspot.com"
+    "project_number": "590363716838",
+    "project_id": "realtimeregister-92bf8",
+    "storage_bucket": "realtimeregister-92bf8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1083850378307:android:f44ba5ebc0611920eb18f6",
+        "mobilesdk_app_id": "1:590363716838:android:01257ce0ebf6a20ba9df27",
         "android_client_info": {
           "package_name": "com.android.realtimeregister"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCEhQrUJ2gr8MXF2LHSP-09y0MmlR36o-c"
+          "current_key": "AIzaSyA3I5cexTQjx1oGJSCQz6Guo8o-z89eQhM"
         }
       ],
       "services": {

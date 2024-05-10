@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.email.R;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText editTextTo,editTextSubject,editTextMessage;

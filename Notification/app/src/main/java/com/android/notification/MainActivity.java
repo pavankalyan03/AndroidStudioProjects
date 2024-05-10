@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 String channelID = "CHANNEL_ID_NOTIFICATION";
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), channelID);
                 builder.setSmallIcon(R.drawable.notifications);
-                String notify_text = notitext.getText();
+                String notify_text = notitext.getText().toString();
 
                 builder.setContentTitle("Notification Title");
                 builder.setContentText(notify_text);
